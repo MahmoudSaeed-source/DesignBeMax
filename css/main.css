@@ -89,7 +89,7 @@ p {
 }
 
 .header {
-  background-image: url("../../../images/header/bg1.jpg");
+  background-image: url("././../images/header/bg1.jpg");
   position: relative;
   background-size: cover;
   background-attachment: fixed;
