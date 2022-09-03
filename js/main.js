@@ -124,7 +124,7 @@ Images_Icons.forEach((Element) => {
         let Btn_right = document.createElement("span");
         Btn_right.setAttribute("class", "right");
         viewer.appendChild(Btn_right);
-        // Btn_right.innerHTML = `<span>< i class = "fa-solid fa-angle-right" > < /i></span>`
+        Btn_right.innerText = `<span>< i class = "fa-solid fa-angle-right" > < /i></span>`
         Btn_left.addEventListener("click", () => {
             currentSlider--;
             SliderImage(content_img.src, Btn_right, Btn_left)
