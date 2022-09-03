@@ -1,4 +1,4 @@
-let Nav_Bar = document.querySelector(".full-width");
+let Nav_Bar_header = document.querySelector(".full-width");
 let log_img = document.querySelector(".img-src");
 let video_Btn = document.querySelector(".video_btn");
 let counter_slide = document.querySelector(".counter_slide");
@@ -9,10 +9,10 @@ window.onscroll = function() {
     let light_logo = "images/log/logo-light.png";
     let OfSetY = window.pageYOffset;
     if (OfSetY > 100) {
-        Nav_Bar.classList.add("nav-scroll");
+        Nav_Bar_header.classList.add("nav-scroll");
         log_img.src = Dark_Logo;
     } else {
-        Nav_Bar.classList.remove("nav-scroll");
+        Nav_Bar_header.classList.remove("nav-scroll");
         log_img.src = light_logo;
     }
     counterSlide();
