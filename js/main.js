@@ -10,8 +10,8 @@ let counter_slide = document.querySelector(".counter_slide");
 
 // start nav bar scroll
 window.onscroll = function() {
-    let Dark_Logo = "../images/log/logo-dark.png";
-    let light_logo = "../images/log/logo-light.png";
+    let Dark_Logo = "images/log/logo-dark.png";
+    let light_logo = "images/log/logo-light.png";
     let OfSetY = window.pageYOffset;
     if (OfSetY > 100) {
         nav_bar.classList.add("nav-scroll");
