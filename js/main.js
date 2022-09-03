@@ -3,11 +3,6 @@ let log_img = document.querySelector(".img-src");
 let video_Btn = document.querySelector(".video_btn");
 let counter_slide = document.querySelector(".counter_slide");
 
-
-
-
-
-
 // start nav bar scroll
 window.onscroll = function() {
     let Dark_Logo = "images/log/logo-dark.png";
