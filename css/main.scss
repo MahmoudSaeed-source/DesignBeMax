@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "./files_scss/global";
+@import "./files_scss/variables";
+@import "./files_scss/sections/header";
+@import "./files_scss/sections/nav";
+@import "./files_scss/sections/about";
+@import "./files_scss/sections/portfolio";
+@import "./files_scss/sections/services";
+@import "./files_scss/sections/team";
+@import "./files_scss/sections/blog";
+@import "./files_scss/sections/contact";
+@import "./files_scss/sections/footer";
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";

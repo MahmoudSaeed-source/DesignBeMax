@@ -1,0 +1,156 @@
+.services {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    h2 {
+        width: 30px;
+        font-size: 37px;
+        font-weight: 200;
+        text-transform: capitalize;
+        letter-spacing: .2rem;
+        font-family: $second_font;
+        border-left: 1px solid #eee;
+        padding-left: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 60px;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: -1px;
+            background-color: #f00;
+            width: 1px;
+            height: 50%;
+        }
+        span {
+            font-weight: 700;
+        }
+    }
+    .services_items {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .serves {
+            width: 350px;
+            height: 220px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            flex-direction: column;
+            font-family: $main-font;
+            padding: 30px 15px;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0px 5px 35px 0px rgb(148 146 245 / 15%);
+            h4 {
+                color: $main_red;
+                font-weight: 400;
+                font-size: 22px;
+                svg {
+                    font-size: 30px;
+                }
+            }
+            h3 {
+                color: #000;
+                font-weight: 400;
+                font-size: 18px;
+            }
+            p {
+                color: $p_gary_color;
+                font-family: $second_font;
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+    }
+    .banner-services {
+        width: 100%;
+        background-image: url(../../../images/services/4.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        color: #ffff;
+        width: 100%;
+        margin: 0%;
+        .over_Banner {
+            width: 100%;
+            height: 100%;
+            background-color: #00000096;
+            padding-top: 60px;
+            .content {
+                width: 100%;
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                overflow: hidden;
+                flex-wrap: wrap;
+                margin-top: 80px;
+                margin-bottom: 30px;
+                .content-one {
+                    font-family: $main-font;
+                    border-right: 2px solid $main_red;
+                    height: 140px;
+                    p {
+                        color: rgb(210, 204, 204);
+                        font-size: 18px;
+                        line-height: 1.2;
+                    }
+                }
+                .content-two {
+                    padding-left: 25px;
+                    height: 140px;
+                    p {
+                        color: #fff;
+                        font-style: italic;
+                        font-size: 20px;
+                        line-height: 1.2;
+                    }
+                }
+            }
+            .Button_Container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 90px;
+                .Btn-content {
+                    width: 255px;
+                    height: 130px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    background-color: rgba(70, 70, 70, 0.55);
+                    color: rgb(255, 255, 255);
+                    border-radius: 4px;
+                    cursor: pointer;
+                    &.active {
+                        background-color: #fff;
+                        h3 {
+                            color: #000;
+                        }
+                    }
+                    svg {
+                        color: $main_red;
+                        font-size: 29px;
+                        margin-bottom: 20px;
+                    }
+                    h3 {
+                        font-weight: 600;
+                        font-family: $second_font;
+                    }
+                }
+            }
+        }
+    }
+}

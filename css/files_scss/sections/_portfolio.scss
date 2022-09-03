@@ -1,0 +1,176 @@
+.portfolio {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 40px 60px;
+    h2 {
+        width: 30px;
+        font-size: 37px;
+        font-weight: 200;
+        text-transform: capitalize;
+        letter-spacing: .2rem;
+        font-family: $second_font;
+        border-left: 1px solid #eee;
+        padding-left: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 60px;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: -1px;
+            background-color: #f00;
+            width: 1px;
+            height: 50%;
+        }
+        span {
+            font-weight: 700;
+        }
+    }
+    ul {
+        list-style: none;
+        width: 28%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        li {
+            font-family: $main-font;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            &.active {
+                color: #f00
+            }
+        }
+    }
+    .gallery {
+        width: 100%;
+        padding-left: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .item {
+            max-width: 700px;
+            height: 350px;
+            max-height: 350px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            display: none;
+            &.active {
+                display: flex;
+            }
+            &:hover .over {
+                height: 98%;
+                width: 100%;
+                top: 0;
+                left: 0;
+            }
+            .over {
+                overflow: hidden;
+                position: absolute;
+                width: 100%;
+                height: 0;
+                left: 0;
+                top: -50px;
+                background-color: #f8f9faed;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                transition: .3s ease;
+                .p1 {
+                    font-size: 16px;
+                    color: #000;
+                    font-family: $main-font;
+                    font-weight: 400;
+                }
+                .p2 {
+                    font-size: 16px;
+                    color: $p_gary_color;
+                    font-family: $main-font;
+                    font-weight: 400;
+                }
+                .img-icon {
+                    width: 60px;
+                    height: 60px;
+                    position: absolute;
+                    bottom: 60px;
+                    right: 60px;
+                    cursor: pointer;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .item-img {
+                height: 300;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.counter_slide {
+    margin-top: 30px;
+    width: 100%;
+    height: 300px;
+    background-image: url(../../../images/portfolio/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    .overlay_cover {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        background-color: #0009;
+        .Don-goals {
+            height: 50%;
+            color: #ffff;
+            font-family: $main-font;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            h2 {
+                text-transform: uppercase;
+                font-weight: 500;
+                color: $p_gary_color;
+                svg {
+                    font-size: 40px;
+                    color: #fff;
+                }
+            }
+            h3 {
+                font-size: 40px;
+                font-family: $second_font;
+                font-weight: 700;
+            }
+            h4 {
+                font-size: 20px;
+                font-weight: 500;
+                color: #ddd;
+            }
+        }
+    }
+}
