@@ -1,18 +1,18 @@
-let nav_bar = document.querySelector(".full-width");
+let Nav_Bar = document.querySelector(".full-width");
 let log_img = document.querySelector(".img-src");
 let video_Btn = document.querySelector(".video_btn");
 let counter_slide = document.querySelector(".counter_slide");
-
+let imagesSlider = document.querySelectorAll(".item-img img");
 // start nav bar scroll
 window.onscroll = function() {
     let Dark_Logo = "images/log/logo-dark.png";
     let light_logo = "images/log/logo-light.png";
     let OfSetY = window.pageYOffset;
     if (OfSetY > 100) {
-        nav_bar.classList.add("nav-scroll");
+        Nav_Bar.classList.add("nav-scroll");
         log_img.src = Dark_Logo;
     } else {
-        nav_bar.classList.remove("nav-scroll");
+        Nav_Bar.classList.remove("nav-scroll");
         log_img.src = light_logo;
     }
     counterSlide();
@@ -93,7 +93,7 @@ Li_item_Link.forEach((ele) => {
 
 // start images gallery
 let Images_Icons = document.querySelectorAll(".icon-img");
-let currentSlider = 1;
+let number_Items = 1;
 Images_Icons.forEach((Element) => {
     Element.addEventListener("click", (e) => {
         let Img_slider_container = document.createElement("div");
@@ -117,35 +117,35 @@ Images_Icons.forEach((Element) => {
         Btn_right.setAttribute("class", "right");
         viewer.appendChild(Btn_right);
 
-        // Btn_left.addEventListener("click", () => {
-        //     currentSlider--;
-        //     SliderImage(content_img.src, Btn_right, Btn_left)
-        // })
-        // Btn_right.addEventListener("click", () => {
-        //     currentSlider--;
-        //     SliderImage(content_img.src, Btn_right, Btn_left)
-        // })
+        Btn_left.addEventListener("click", () => {
+            if (number_Items == 1) {
+                Btn_left.classList.add("disable")
+            } else {
+                back.classList.remove("disable")
+                number_Items--;
+                content_img.src = imagesSlider[number_Items].src;
+            }
+        })
+        Btn_right.addEventListener("click", () => {
+            if (number_Items == imagesSlider.length) {
+                next.classList.remove("disable")
+                number_Items++;
+                content_img.src = imagesSlider[number_Items].src;
+
+            } else {
+                Btn_right.classList.add("disable")
+            }
+
+        })
         CloseViewer();
 
     });
 });
-// SliderImage()
+
 // function to make slider images
-// function SliderImage(putOn, next, back) {
-//     let imagesSlider = document.querySelectorAll(".item-img img");
-//     console.log(imagesSlider)
-//     place = SliderImage[currentSlider - 1].src;
-//     if (currentSlider == imagesSlider) {
-//         next.classList.remove("disable")
-//     } else {
-//         next.classList.add("disable")
-//     }
-//     if (currentSlider == 1) {
-//         back.classList.add("disable")
-//     } else {
-//         back.classList.remove("disable")
-//     }
-// }
+
+
+
 
 
 function CloseViewer() {
