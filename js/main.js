@@ -34,7 +34,6 @@ function skillAnimation() {
     let outerHight = skills.offsetHeight; // only height element 
     let screenHeight = this.innerHeight; // only screen destines
     let windowScrollTop = window.pageYOffset; //how much scroll
-
     if (windowScrollTop > (offsetY + outerHight - screenHeight)) {
         let value_progress = document.querySelectorAll(".value-progress");
         value_progress.forEach(span => {
@@ -114,8 +113,6 @@ Images_Icons.forEach((Element) => {
         let Btn_left = document.createElement("span");
         Btn_left.setAttribute("class", "left");
         viewer.appendChild(Btn_left);
-
-
         let content_img = document.createElement("img");
         content_img.setAttribute("class", "img-content");
         viewer.appendChild(content_img);
@@ -124,7 +121,7 @@ Images_Icons.forEach((Element) => {
         let Btn_right = document.createElement("span");
         Btn_right.setAttribute("class", "right");
         viewer.appendChild(Btn_right);
-        Btn_right.innerText = `<span>< i class = "fa-solid fa-angle-right" > < /i></span>`
+        Btn_right.innerText = < span > < i class = "fa-solid fa-angle-right" > < /i></span > ;
         Btn_left.addEventListener("click", () => {
             currentSlider--;
             SliderImage(content_img.src, Btn_right, Btn_left)
