@@ -122,35 +122,35 @@ Images_Icons.forEach((Element) => {
         Btn_right.setAttribute("class", "right");
         viewer.appendChild(Btn_right);
 
-        Btn_left.addEventListener("click", () => {
-            currentSlider--;
-            SliderImage(content_img.src, Btn_right, Btn_left)
-        })
-        Btn_right.addEventListener("click", () => {
-            currentSlider--;
-            SliderImage(content_img.src, Btn_right, Btn_left)
-        })
+        // Btn_left.addEventListener("click", () => {
+        //     currentSlider--;
+        //     SliderImage(content_img.src, Btn_right, Btn_left)
+        // })
+        // Btn_right.addEventListener("click", () => {
+        //     currentSlider--;
+        //     SliderImage(content_img.src, Btn_right, Btn_left)
+        // })
         CloseViewer();
 
     });
 });
-SliderImage()
-    // function to make slider images
-    // function SliderImage(putOn, next, back) {
-    //     let imagesSlider = document.querySelectorAll(".item-img img");
-    //     console.log(imagesSlider)
-    //     place = SliderImage[currentSlider - 1].src;
-    //     if (currentSlider == imagesSlider) {
-    //         next.classList.remove("disable")
-    //     } else {
-    //         next.classList.add("disable")
-    //     }
-    //     if (currentSlider == 1) {
-    //         back.classList.add("disable")
-    //     } else {
-    //         back.classList.remove("disable")
-    //     }
-    // }
+// SliderImage()
+// function to make slider images
+// function SliderImage(putOn, next, back) {
+//     let imagesSlider = document.querySelectorAll(".item-img img");
+//     console.log(imagesSlider)
+//     place = SliderImage[currentSlider - 1].src;
+//     if (currentSlider == imagesSlider) {
+//         next.classList.remove("disable")
+//     } else {
+//         next.classList.add("disable")
+//     }
+//     if (currentSlider == 1) {
+//         back.classList.add("disable")
+//     } else {
+//         back.classList.remove("disable")
+//     }
+// }
 
 
 function CloseViewer() {
