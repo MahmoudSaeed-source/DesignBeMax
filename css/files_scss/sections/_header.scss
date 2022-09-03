@@ -12,11 +12,14 @@
     align-items: center;
     justify-content: center;
     padding-top: 30px;
+    overflow: hidden;
     .text_content {
+        max-width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        overflow: hidden;
         h3 {
             font-size: 40px;
             font-family: $second_font;
@@ -26,6 +29,7 @@
         }
         h1 {
             width: 770px;
+            max-width: 100%;
             height: 100px;
             overflow: hidden;
             white-space: nowrap;
@@ -38,8 +42,15 @@
             span {
                 font-size: 70px;
                 font-weight: 700;
+                & {
+                    @include break_point(xsmobil) {
+                        font-size: 30px;
+                    }
+                }
             }
             .massage {
+                width: 350px;
+                max-width: 350px;
                 display: flex;
                 flex-direction: column;
                 position: absolute;
@@ -48,6 +59,13 @@
                 color: $main_red;
                 border-left: 2px solid #fff;
                 animation: clip 7s ease-in-out infinite;
+                & {
+                    @include break_point(xsmobil) {
+                        width: 200px;
+                        max-width: 200px;
+                        overflow: hidden;
+                    }
+                }
                 span {
                     color: $main_red
                 }
@@ -103,11 +121,11 @@
             width: 0;
         }
         15% {
-            width: 350px;
+            width: 100%;
         }
         30% {
             top: 0;
-            width: 350px;
+            width: 100%;
         }
         33% {
             top: 0;
@@ -122,11 +140,11 @@
         }
         48% {
             top: -92px;
-            width: 350px;
+            width: 100%;
         }
         62% {
             top: -92px;
-            width: 350px;
+            width: 100%;
         }
         66% {
             top: -92px;
@@ -140,11 +158,11 @@
         }
         86% {
             top: -184px;
-            width: 350px;
+            width: 100%;
         }
         95% {
             top: -184px;
-            width: 350px;
+            width: 100%;
         }
         98% {
             top: -184px;

@@ -3,6 +3,26 @@ let log_img = document.querySelector(".img-src");
 let video_Btn = document.querySelector(".video_btn");
 let counter_slide = document.querySelector(".counter_slide");
 let imagesSlider = document.querySelectorAll(".item-img img");
+let toggle_btn = document.querySelector(".toggle_btn");
+let links = document.querySelector(".links");
+let menu = document.querySelector(".menu");
+
+// start menu likes open
+toggle_btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        links.classList.toggle("menu");
+        let li_menu = document.querySelectorAll(".menu li");
+        li_menu.forEach(li => {
+            li.addEventListener("click", (ev) => {
+                links.classList.remove("menu");
+            })
+        })
+
+    })
+    // end menu likes open
+
+
+
 // start nav bar scroll
 window.onscroll = function() {
     let Dark_Logo = "images/log/logo-dark.png";

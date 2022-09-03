@@ -8,6 +8,7 @@ nav {
     max-height: 80px;
     background-color: transparent;
     z-index: 10000;
+    position: relative;
     &.nav-scroll {
         position: fixed;
         top: -100px;
@@ -35,40 +36,140 @@ nav {
     .container {
         display: flex;
         z-index: 100;
+        & {
+            @include break_point(xsmobil) {
+                display: flex;
+                z-index: 100;
+                align-items: center;
+                justify-content: space-between;
+            }
+            @include break_point(mobil) {
+                display: flex;
+                z-index: 100;
+                align-items: center;
+                justify-content: space-between;
+            }
+            @include break_point(medium) {
+                display: flex;
+                z-index: 100;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
     }
-    .logo {
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    img {
+        width: 100px;
+        height: 32px;
+    }
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    z-index: 100;
+    &.menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 297px;
+        background-color: #2a3038;
+        color: #fff;
+        z-index: 2000;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        align-items: end;
+        box-shadow: 2px 2px 2px #000, -2px -2px 2px #000;
+        transition: all .3s ease-in-out;
+        li {
+            width: 100%;
+            height: 40px;
+            font-family: $main-font;
+            font-size: 17px;
+            position: relative;
+            transition: all .3 ease-in-out;
+            &:hover {
+                background-color: $main_red;
+                color: #000;
+            }
+            &::after {
+                content: "";
+                width: 50%;
+                height: 1px;
+                background-color: #ddd;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    & {
+        @include break_point(xsmobil) {
+            display: none;
+        }
+        @include break_point(mobil) {
+            display: none;
+        }
+        @include break_point(medium) {
+            display: none;
+        }
+    }
+    li {
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 100;
-        img {
-            width: 100px;
-            height: 32px;
+        margin-left: 30px;
+        &:focus {
+            color: $main_red;
         }
-    }
-    .links {
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        z-index: 100;
-        li {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 30px;
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: capitalize;
+            font-weight: 500;
             &:focus {
-                color: $main_red;
-            }
-            a {
-                color: #fff;
-                text-decoration: none;
-                font-size: 14px;
-                text-transform: capitalize;
-                font-weight: 500;
-                &:focus {
-                    color: $main_red
-                }
+                color: $main_red
             }
         }
     }
+}
+
+.toggle_btn {
+    width: 20%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px;
+    margin-left: 10px;
+    cursor: pointer;
+    & {
+        @include break_point(medium) {
+            display: flex;
+            width: 200px;
+            margin-top: -7px;
+        }
+        @include break_point(large) {
+            display: none;
+        }
+        @include break_point(xlarge) {
+            display: none;
+        }
+    }
+}
+
+svg {
+    color: #fff;
+    width: 50px;
 }
