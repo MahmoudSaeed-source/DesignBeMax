@@ -7,6 +7,22 @@ let toggle_btn = document.querySelector(".toggle_btn");
 let links = document.querySelector(".links");
 let menu = document.querySelector(".menu");
 
+// start function set class active onscroll on the links
+function setActiveClass_onScroll() {
+    const sections = document.querySelectorAll("section");
+    console.log(sections)
+}
+
+
+
+// end function set class active onscroll on the links
+
+
+
+
+
+
+
 // start menu likes open
 toggle_btn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -37,6 +53,7 @@ window.onscroll = function() {
     }
     counterSlide();
     skillAnimation();
+    setActiveClass_onScroll();
 };
 
 // end nav bar scroll

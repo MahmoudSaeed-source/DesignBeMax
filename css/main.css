@@ -1690,7 +1690,7 @@ svg {
   font-weight: 300;
 }
 
-footer {
+.footer {
   width: 100%;
   height: 300px;
   background-color: #111;
@@ -1698,7 +1698,7 @@ footer {
   align-items: center;
   justify-content: center;
 }
-footer .container {
+.footer .container {
   justify-content: center;
   align-items: center;
   display: flex;
