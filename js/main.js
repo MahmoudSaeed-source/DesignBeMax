@@ -19,7 +19,7 @@ function setActiveClass_onScroll() {
         const ElementId = section.getAttribute("id");
         if (ScrollWindow >= topElement && ScrollWindow < heightSection) {
             links_A.forEach(a => {
-                a.classList.remove("active");
+                // a.classList.remove("active");
                 console.log(a.getAttribute(ElementId));
 
             })
