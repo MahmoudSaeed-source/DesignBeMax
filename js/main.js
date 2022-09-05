@@ -13,14 +13,16 @@ let menu = document.querySelector(".menu");
 function setActiveClass_onScroll() {
     const sections = document.querySelectorAll("section");
     sections.forEach(section => {
-        const topElement = section.offsetTop;
+        const topElement = section.offsetTop - 170;
         const heightSection = section.offsetHeight;
         const ScrollWindow = window.scrollY;
         const ElementId = section.getAttribute("id");
         if (ScrollWindow >= topElement && ScrollWindow < heightSection) {
             links_A.forEach(a => {
-                // a.classList.remove("active");
-                console.log(a.getAttribute(ElementId));
+                a.classList.remove("active");
+                if (a.getAttribute("href") == '#' + ElementId) {
+                    a.classList.add("active");
+                }
 
             })
         }

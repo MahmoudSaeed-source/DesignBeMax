@@ -22,13 +22,10 @@ nav {
         border: 1px solid #eee;
         li {
             color: #000;
-            &:focus {
-                color: $main_red;
-            }
             a {
                 color: #000 !important;
                 &.active {
-                    color: $main_red;
+                    color: $main_red !important;
                 }
             }
         }
@@ -137,8 +134,8 @@ nav {
             font-size: 14px;
             text-transform: capitalize;
             font-weight: 500;
-            &:focus {
-                color: $main_red
+            &.active {
+                color: $main_red !important;
             }
         }
     }

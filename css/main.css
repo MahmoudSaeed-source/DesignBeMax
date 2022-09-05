@@ -378,14 +378,11 @@ nav.nav-scroll {
 nav.nav-scroll li {
   color: #000;
 }
-nav.nav-scroll li:focus {
-  color: #F24259;
-}
 nav.nav-scroll li a {
   color: #000 !important;
 }
 nav.nav-scroll li a.active {
-  color: #F24259;
+  color: #F24259 !important;
 }
 nav .container {
   display: flex;
@@ -501,8 +498,8 @@ nav .container {
   text-transform: capitalize;
   font-weight: 500;
 }
-.links li a:focus {
-  color: #F24259;
+.links li a.active {
+  color: #F24259 !important;
 }
 
 .toggle_btn {
