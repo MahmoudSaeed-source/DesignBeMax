@@ -384,7 +384,7 @@ nav.nav-scroll li:focus {
 nav.nav-scroll li a {
   color: #000 !important;
 }
-nav.nav-scroll li a:focus {
+nav.nav-scroll li a.active {
   color: #F24259;
 }
 nav .container {

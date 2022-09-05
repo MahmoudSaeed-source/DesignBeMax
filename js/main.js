@@ -5,12 +5,26 @@ let counter_slide = document.querySelector(".counter_slide");
 let imagesSlider = document.querySelectorAll(".item-img img");
 let toggle_btn = document.querySelector(".toggle_btn");
 let links = document.querySelector(".links");
+let links_A = document.querySelectorAll(".links li a");
+
 let menu = document.querySelector(".menu");
 
 // start function set class active onscroll on the links
 function setActiveClass_onScroll() {
     const sections = document.querySelectorAll("section");
-    console.log(sections)
+    sections.forEach(section => {
+        const topElement = section.offsetTop;
+        const heightSection = section.offsetHeight;
+        const ScrollWindow = window.scrollY;
+        const ElementId = section.getAttribute("id");
+        if (ScrollWindow >= topElement && ScrollWindow < heightSection) {
+            links_A.forEach(a => {
+                a.classList.remove("active");
+                console.log(a.getAttribute(ElementId));
+
+            })
+        }
+    })
 }
 
 
