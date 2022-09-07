@@ -22,8 +22,8 @@ function setActiveClass_onScroll() {
                 a.classList.remove("active");
                 if (a.getAttribute("href") == '#' + ElementId) {
                     a.classList.add("active");
+                    console.log(a)
                 }
-
             })
         }
     })
