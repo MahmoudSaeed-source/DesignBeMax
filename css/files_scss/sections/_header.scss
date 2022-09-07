@@ -20,6 +20,11 @@
         justify-content: center;
         flex-direction: column;
         overflow: hidden;
+        .anmaition{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         h3 {
             font-size: 40px;
             font-family: $second_font;
