@@ -1095,7 +1095,22 @@ svg {
 .services h2 span {
   font-weight: 700;
 }
-.services .services_items {
+@media (max-width: 480px) {
+  .services .container {
+    justify-content: center;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .services .container {
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .services .container {
+    justify-content: center;
+  }
+}
+.services .container .services_items {
   height: auto;
   display: flex;
   align-items: center;
@@ -1103,7 +1118,24 @@ svg {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.services .services_items .serves {
+@media (max-width: 480px) {
+  .services .container .services_items {
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .services .container .services_items {
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .services .container .services_items {
+    justify-content: center;
+  }
+}
+.services .container .serves {
   width: 350px;
   height: 220px;
   margin-bottom: 20px;
@@ -1117,20 +1149,38 @@ svg {
   border-radius: 4px;
   box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.15);
 }
-.services .services_items .serves h4 {
+@media (max-width: 480px) {
+  .services .container .serves {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .services .container .serves {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .services .container .serves {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+.services .container .serves h4 {
   color: #F24259;
   font-weight: 400;
   font-size: 22px;
 }
-.services .services_items .serves h4 svg {
+.services .container .serves h4 svg {
   font-size: 30px;
 }
-.services .services_items .serves h3 {
+.services .container .serves h3 {
   color: #000;
   font-weight: 400;
   font-size: 18px;
 }
-.services .services_items .serves p {
+.services .container .serves p {
   color: #666;
   font-family: "Raleway", sans-serif;
   font-size: 15px;
