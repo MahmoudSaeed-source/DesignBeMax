@@ -5,6 +5,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    &{
+        @include break_point(xsmobil){
+            height: auto;
+        }
+        @include break_point(mobil){
+            height: auto;
+        }
+        @include break_point(medium){
+            height: auto;
+        }
+    }
     h2 {
         width: 30px;
         font-size: 37px;
@@ -38,11 +49,25 @@
         justify-content: center;
         .team_content {
             width: 80%;
-            overflow: hidden;
+           
             display: flex;
             justify-content: space-between;
             align-items: center;
             overflow: hidden;
+            &{
+                @include break_point(xsmobil){
+                    flex-direction: column;
+                    height: auto;
+                }
+                @include break_point(mobil){
+                    flex-direction: column;
+                    height: auto;
+                }
+                @include break_point(medium){
+                    flex-direction: column;
+                    height: auto;
+                }
+            }
             .team-img {
                 width: 500px;
                 height: 400px;
@@ -53,6 +78,20 @@
                 font-family: $main-font;
                 overflow: hidden;
                 animation: move 4s linear infinite;
+                &{
+                    @include break_point(xsmobil){
+                        width: 100%;
+                        height: auto;
+                    }
+                    @include break_point(mobil){
+                        width: 100%;
+                        height: auto;
+                    }
+                    @include break_point(medium){
+                        width: 100%;
+                        height: auto;
+                    }
+                }
                 img {
                     width: 200px;
                     height: 200px;
@@ -141,6 +180,11 @@
     max-height: auto;
     background-color: #f7f7f7;
     overflow: hidden;
+    & {
+            @include break_point(xsmobil) {
+                height: auto;
+            }
+        }
     .content-price {
         width: 100%;
         height: auto;
@@ -149,6 +193,23 @@
         justify-content: center;
         margin-top: 30px;
         overflow: hidden;
+        &{
+            @include break_point(mobil){
+                flex-direction: column;
+                width: 100%;
+                justify-content: center;
+            }
+            @include break_point(xsmobil){
+                flex-direction: column;
+                width: 100%;
+                justify-content: center;
+            }
+            @include break_point(medium){
+                flex-direction: column;
+                width: 100%;
+                justify-content: center;
+            }
+        }
         .product-price {
             width: 400px;
             height: 500px;
@@ -165,6 +226,23 @@
             box-shadow: 0px -1px 8px 3px #ddd, 0px -1px 1px 3px #ddd;
             ;
             border-radius: 4px;
+            & {
+                    @include break_point(xsmobil) {
+                        max-width: 95%;
+                        margin-bottom: 40px;
+                        margin-right: 5px;
+                    }
+                    @include break_point(mobil) {
+                        max-width: 95%;
+                        margin-bottom: 40px;
+                        margin-right: 5px;
+                    }
+                    @include break_point(medium) {
+                        max-width: 95%;
+                        margin-bottom: 40px;
+                        margin-right: 5px;
+                    }
+                }
             .type {
                 width: 100%;
                 height: 130px;
