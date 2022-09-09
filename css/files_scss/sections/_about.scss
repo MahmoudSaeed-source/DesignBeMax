@@ -1,7 +1,9 @@
 .about {
     width: 100%;
+    max-width: 100%;
     margin-top: 80px;
     color: #000;
+    padding: 20px;
     .container {
         display: flex;
         align-content: center;
@@ -20,6 +22,17 @@
             font-weight: 300;
             letter-spacing: .2rem;
             margin-bottom: 30px;
+            & {
+                @include break_point(xsmobil) {
+                    text-align: center;
+                }
+                @include break_point(mobil) {
+                    text-align: center;
+                }
+                @include break_point(medium) {
+                    text-align: center;
+                }
+            }
             span {
                 font-weight: 900;
             }
@@ -39,6 +52,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        & {
+            @include break_point(mobil) {
+                flex-direction: column;
+                height: auto;
+            }
+            @include break_point(xsmobil) {
+                flex-direction: column;
+                height: auto;
+            }
+            @include break_point(medium) {
+                flex-direction: column;
+                height: auto;
+            }
+        }
         h2 {
             width: 30px;
             font-size: 37px;
@@ -66,6 +93,20 @@
             margin-top: 20px;
             font-size: 18px;
             color: $p_gary_color;
+            & {
+                @include break_point(xsmobil) {
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                @include break_point(mobil) {
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                @include break_point(medium) {
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
         }
         .video {
             display: flex;
@@ -97,6 +138,20 @@
         justify-content: center;
         flex-direction: column;
         font-size: 16px;
+        & {
+            @include break_point(xsmobil) {
+                width: 100%;
+                margin-bottom: 60px;
+            }
+            @include break_point(mobil) {
+                width: 100%;
+                margin-bottom: 60px;
+            }
+            @include break_point(medium) {
+                width: 100%;
+                margin-bottom: 60px;
+            }
+        }
         .skill-item {
             width: 100%;
             p {
@@ -136,8 +191,42 @@
         padding: 30px;
         background-color: #eee;
         height: 400px;
+        & {
+            @include break_point(xsmobil) {
+                flex-direction: column;
+                height: auto;
+                padding: 11px 5px 13px 24px;
+            }
+            @include break_point(mobil) {
+                flex-direction: column;
+                height: auto;
+                padding: 11px 5px 13px 24px;
+            }
+            @include break_point(medium) {
+                flex-direction: column;
+                height: auto;
+                padding: 11px 5px 13px 24px;
+            }
+        }
         .container {
             flex-direction: row;
+            & {
+                @include break_point(xsmobil) {
+                    flex-direction: column;
+                    height: auto;
+                    padding: 0;
+                }
+                @include break_point(mobil) {
+                    flex-direction: column;
+                    height: auto;
+                    padding: 0;
+                }
+                @include break_point(medium) {
+                    flex-direction: column;
+                    height: auto;
+                    padding: 0;
+                }
+            }
         }
         .item {
             background-color: #fff;
@@ -148,6 +237,25 @@
             height: 250px;
             padding: 20px;
             margin-right: 20px;
+            & {
+                @include break_point(xsmobil) {
+                    margin-bottom: 30px;
+                    max-height: 100%;
+                    height: auto;
+                    width: 100%;
+                    max-width: 100%;
+                }
+                @include break_point(mobil) {
+                    margin-bottom: 30px;
+                    width: 100%;
+                    max-width: 100%;
+                }
+                @include break_point(medium) {
+                    margin-bottom: 30px;
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
             svg {
                 color: $main_red;
                 font-size: 40px;

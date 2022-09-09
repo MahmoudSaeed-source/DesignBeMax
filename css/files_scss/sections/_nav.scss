@@ -39,12 +39,14 @@ nav {
                 z-index: 100;
                 align-items: center;
                 justify-content: space-between;
+                padding: 0px 30px;
             }
             @include break_point(mobil) {
                 display: flex;
                 z-index: 100;
                 align-items: center;
                 justify-content: space-between;
+                padding: 0px 30px;
             }
             @include break_point(medium) {
                 display: flex;
@@ -61,6 +63,7 @@ nav {
     align-items: center;
     justify-content: center;
     z-index: 100;
+    padding-left: 30px;
     img {
         width: 100px;
         height: 32px;

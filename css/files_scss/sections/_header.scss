@@ -1,61 +1,64 @@
 .header {
-  background-image: url("././../images/header/bg1.jpg");
-  position: relative;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  margin-top: -60px;
-  width: 100%;
-  height: 120vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 30px;
-  overflow: hidden;
-  .text_content {
-    max-width: 100%;
+    background-image: url("././../images/header/bg1.jpg");
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin-top: -60px;
+    width: 100%;
+    height: 120vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    padding-top: 30px;
     overflow: hidden;
-    h3 {
-      font-size: 40px;
-      font-family: $second_font;
-      color: #fff;
-      margin-bottom: 20px;
-      font-weight: 500;
-    }
+    .text_content {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        h3 {
+            font-size: 40px;
+            font-family: $second_font;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
         .anmaition {
             display: flex;
             position: relative;
             align-items: flex-start;
             justify-content: center;
+            align-items: center;
             .anmaition_title {
-                font-size:80px;
-                color:#fff;
+                font-size: 80px;
+                color: #fff;
                 font-family: $second_font;
                 text-transform: uppercase;
                 width: auto;
             }
             ul {
-                animation:moved 5s steps(14) infinite;
-               margin-left: 15px;
-               width: 0;
-            //    overflow: hidden;
-               flex-wrap: nowrap;
-                height: 90px;
+                animation: moved 5s steps(14) infinite;
+                margin-left: 15px;
+                width: 0;
+                // overflow: hidden;
+                flex-wrap: nowrap;
+                height: 60px;
+                border: 2px solid green;
                 transition: all .3s ease;
                 line-height: 90px;
-                li{ 
+                // overflow: hidden;
+                li {
                     font-size: 80px;
                     font-weight: 700;
                     text-transform: uppercase;
                     font-family: $main_font;
                     position: relative;
-                    color:$main_red;
-                    animation: moveup 20s  infinite;
-                    &::after{
+                    color: $main_red;
+                    animation: moveup 15s steps(3) infinite;
+                    &::after {
                         content: "";
                         position: absolute;
                         right: 0;
@@ -68,70 +71,61 @@
             }
         }
         p {
-      text-align: center;
-      color: #ffff;
-      font-size: 18px;
-      font-weight: 400;
-      margin-top: 30px;
-      font-family: $second_font;
-      text-transform: capitalize;
-    }
-    .btn-container {
-      width: 400px;
-      height: 120px;
-      padding: 10px;
-      margin-top: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      span {
-        width: 170px;
-        height: 40px;
-        font-size: 16px;
-        text-transform: uppercase;
-        color: #fff;
-        border: 1px solid #ffff;
-        padding: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 4px;
-        margin-right: 10px;
-        cursor: pointer;
-        transition: width 0.7s ease;
-        position: relative;
-        &:nth-child(2) {
-          background-color: $main_red;
-          border: none;
+            text-align: center;
+            color: #ffff;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 30px;
+            font-family: $second_font;
+            text-transform: capitalize;
         }
-        &:hover {
-          background-color: #fff;
-          color: #000;
+        .btn-container {
+            width: 400px;
+            height: 120px;
+            padding: 10px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                width: 170px;
+                height: 40px;
+                font-size: 16px;
+                text-transform: uppercase;
+                color: #fff;
+                border: 1px solid #ffff;
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+                margin-right: 10px;
+                cursor: pointer;
+                transition: width 0.7s ease;
+                position: relative;
+                &:nth-child(2) {
+                    background-color: $main_red;
+                    border: none;
+                }
+                &:hover {
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
         }
-      }
     }
-  }
- @keyframes moved {
-    40%,60%{
-        width: calc(100% + 30px);
+    @keyframes moved {
+        40%,
+        60% {
+            width: calc(100% + 30px);
+        }
+        100% {
+            left: 0;
+        }
     }
-   
-    100%{
-        left: 0;
+    @keyframes moveup {
+        100% {
+            top: -270px;
+        }
     }
- }
- @keyframes moveup {
-    20%{
-        top: 0px;
-    }
-    50%{
-        top:-93px;
-    }
-    80%{
-        top:-186px;
-    }
-    100%{
-        top:0px;
-    }
- }
 }
