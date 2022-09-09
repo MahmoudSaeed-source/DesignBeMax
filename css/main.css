@@ -303,9 +303,29 @@ nav .container {
   z-index: 100;
   padding-left: 30px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo {
+    width: 50%;
+  }
+}
 .logo img {
   width: 100px;
   height: 32px;
+}
+@media (max-width: 480px) {
+  .logo img {
+    width: 140px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .logo img {
+    width: 140px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo img {
+    width: 140px;
+  }
 }
 
 .links {
@@ -1817,14 +1837,14 @@ svg {
   flex-direction: column;
 }
 
-.logo {
+.imageg_logo {
   width: 100px;
   height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.logo img {
+.imageg_logo img {
   width: 100%;
   height: 100%;
 }

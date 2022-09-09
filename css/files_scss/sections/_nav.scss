@@ -64,9 +64,23 @@ nav {
     justify-content: center;
     z-index: 100;
     padding-left: 30px;
+    &{
+        @include break_point(medium){
+            width: 50%;
+        }
+    }
     img {
         width: 100px;
         height: 32px;
+        @include break_point(xsmobil) {
+               width:140px;
+            }
+        @include break_point(mobil) {
+               width:140px;
+            }
+        @include break_point(medium) {
+               width:140px;
+            }
     }
 }
 
