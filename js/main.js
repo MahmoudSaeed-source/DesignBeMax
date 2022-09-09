@@ -12,18 +12,16 @@ let menu = document.querySelector(".menu");
 // start function set class active onscroll on the links
 function setActiveClass_onScroll() {
     const sections = document.querySelectorAll("section");
-    sections.forEach(section => {
-        const topElement = section.offsetTop - 170;
-        const heightSection = section.offsetHeight;
-        const ScrollWindow = window.scrollY;
-        const ElementId = section.getAttribute("id");
-        if (ScrollWindow >= topElement && ScrollWindow < heightSection) {
-            links_A.forEach(a => {
-                a.classList.remove("active");
-                if (a.getAttribute("href") == '#' + ElementId) {
-                    a.classList.add("active");
-                    console.log(a)
-                }
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 100;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+        if (top >= offset && top < offset + height) {
+            links_A.forEach(link => {
+                link.classList.remove('active');
+                let activeLink = document.querySelector('.links li a[href*=' + id + ']')
+                activeLink.classList.add('active')
             })
         }
     })
