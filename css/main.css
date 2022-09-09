@@ -550,6 +550,8 @@ svg {
   .about .our-mission-skills p {
     text-align: center;
     margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
@@ -798,6 +800,21 @@ svg {
   margin-top: 30px;
   padding: 40px 60px;
 }
+@media (max-width: 480px) {
+  .portfolio {
+    padding: 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .portfolio {
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .portfolio {
+    padding: 0;
+  }
+}
 .portfolio h2 {
   width: 30px;
   font-size: 37px;
@@ -874,6 +891,21 @@ svg {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media (max-width: 480px) {
+  .portfolio .gallery {
+    padding: 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .portfolio .gallery {
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .portfolio .gallery {
+    padding: 0;
+  }
+}
 .portfolio .gallery .item {
   max-width: 700px;
   height: 350px;
@@ -891,12 +923,24 @@ svg {
   .portfolio .gallery .item {
     width: 100%;
     max-width: 100%;
+    height: auto;
+    padding: 0;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
   .portfolio .gallery .item {
     width: 100%;
     max-width: 100%;
+    height: auto;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .portfolio .gallery .item {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 0;
   }
 }
 .portfolio .gallery .item.active {
@@ -949,8 +993,44 @@ svg {
 .portfolio .gallery .item .item-img {
   height: 300;
 }
+@media (max-width: 480px) {
+  .portfolio .gallery .item .item-img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .portfolio .gallery .item .item-img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .portfolio .gallery .item .item-img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 .portfolio .gallery .item .item-img img {
   height: 100%;
+}
+@media (max-width: 480px) {
+  .portfolio .gallery .item .item-img img {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .portfolio .gallery .item .item-img img {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .portfolio .gallery .item .item-img img {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .counter_slide {
@@ -1215,10 +1295,58 @@ svg {
   margin-top: 80px;
   margin-bottom: 30px;
 }
+@media (max-width: 480px) {
+  .services .banner-services .over_Banner .content {
+    flex-direction: column;
+    height: auto;
+    margin-top: 40px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .services .banner-services .over_Banner .content {
+    flex-direction: column;
+    height: auto;
+    margin-top: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .services .banner-services .over_Banner .content {
+    flex-direction: column;
+    height: auto;
+    margin-top: 40px;
+  }
+}
 .services .banner-services .over_Banner .content .content-one {
   font-family: "Poppins", sans-serif;
   border-right: 2px solid #F24259;
   height: 140px;
+}
+@media (max-width: 480px) {
+  .services .banner-services .over_Banner .content .content-one {
+    border-bottom: 2px solid #F24259;
+    border-right: none;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .services .banner-services .over_Banner .content .content-one {
+    border-bottom: 2px solid #F24259;
+    border-right: none;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .services .banner-services .over_Banner .content .content-one {
+    border-bottom: 2px solid #F24259;
+    border-right: none;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+  }
 }
 .services .banner-services .over_Banner .content .content-one p {
   color: rgb(210, 204, 204);
@@ -1228,6 +1356,27 @@ svg {
 .services .banner-services .over_Banner .content .content-two {
   padding-left: 25px;
   height: 140px;
+}
+@media (max-width: 480px) {
+  .services .banner-services .over_Banner .content .content-two {
+    height: auto;
+    text-align: center;
+    padding: 20px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .services .banner-services .over_Banner .content .content-two {
+    height: auto;
+    text-align: center;
+    padding: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .services .banner-services .over_Banner .content .content-two {
+    height: auto;
+    text-align: center;
+    padding: 20px;
+  }
 }
 .services .banner-services .over_Banner .content .content-two p {
   color: #fff;
@@ -1241,6 +1390,21 @@ svg {
   justify-content: space-between;
   margin-bottom: 90px;
 }
+@media (max-width: 480px) {
+  .services .banner-services .over_Banner .Button_Container {
+    flex-direction: column;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .services .banner-services .over_Banner .Button_Container {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .services .banner-services .over_Banner .Button_Container {
+    flex-direction: column;
+  }
+}
 .services .banner-services .over_Banner .Button_Container .Btn-content {
   width: 255px;
   height: 130px;
@@ -1252,6 +1416,21 @@ svg {
   color: rgb(255, 255, 255);
   border-radius: 4px;
   cursor: pointer;
+}
+@media (max-width: 480px) {
+  .services .banner-services .over_Banner .Button_Container .Btn-content {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .services .banner-services .over_Banner .Button_Container .Btn-content {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .services .banner-services .over_Banner .Button_Container .Btn-content {
+    margin-bottom: 20px;
+  }
 }
 .services .banner-services .over_Banner .Button_Container .Btn-content.active {
   background-color: #fff;

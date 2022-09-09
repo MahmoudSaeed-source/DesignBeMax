@@ -142,10 +142,51 @@
                 flex-wrap: wrap;
                 margin-top: 80px;
                 margin-bottom: 30px;
+                &{
+                    @include break_point(xsmobil){
+                        flex-direction: column;
+                        height: auto;
+                        margin-top: 40px;
+                    }
+                    @include break_point(mobil){
+                        flex-direction: column;
+                        height: auto;
+                        margin-top: 40px;
+                    }
+                    @include break_point(medium){
+                        flex-direction: column;
+                        height: auto;
+                        margin-top: 40px;
+                    }
+                   
+                }
                 .content-one {
                     font-family: $main-font;
                     border-right: 2px solid $main_red;
                     height: 140px;
+                    &{
+                        @include break_point(xsmobil){
+                            border-bottom: 2px solid #F24259;
+                                border-right: none;
+                                height: auto;
+                                text-align: center;
+                                    padding: 20px;
+                        }
+                        @include break_point(mobil){
+                        border-bottom: 2px solid #F24259;
+                            border-right: none;
+                            height: auto;
+                            text-align: center;
+                                padding: 20px;
+                        }
+                        @include break_point(medium){
+                        border-bottom: 2px solid #F24259;
+                            border-right: none;
+                            height: auto;
+                            text-align: center;
+                                padding: 20px;
+                        }
+                    }
                     p {
                         color: rgb(210, 204, 204);
                         font-size: 18px;
@@ -155,6 +196,29 @@
                 .content-two {
                     padding-left: 25px;
                     height: 140px;
+                    & {
+                            @include break_point(xsmobil) {
+                                
+                             
+                                height: auto;
+                                text-align: center;
+                                padding: 20px;
+                            }
+                    
+                            @include break_point(mobil) {
+                              
+                                height: auto;
+                                text-align: center;
+                                padding: 20px;
+                            }
+                    
+                            @include break_point(medium) {
+                              
+                                height: auto;
+                                text-align: center;
+                                padding: 20px;
+                            }
+                        }
                     p {
                         color: #fff;
                         font-style: italic;
@@ -168,6 +232,17 @@
                 align-items: center;
                 justify-content: space-between;
                 margin-bottom: 90px;
+                &{
+                    @include break_point(xsmobil){
+                        flex-direction: column;
+                    }
+                    @include break_point(mobil){
+                        flex-direction: column;
+                    }
+                    @include break_point(medium){
+                        flex-direction: column;
+                    }
+                }
                 .Btn-content {
                     width: 255px;
                     height: 130px;
@@ -179,6 +254,17 @@
                     color: rgb(255, 255, 255);
                     border-radius: 4px;
                     cursor: pointer;
+                    &{
+                        @include break_point(xsmobil){
+                            margin-bottom: 20px;
+                        }
+                        @include break_point(mobil){
+                            margin-bottom: 20px;
+                        }
+                        @include break_point(medium){
+                            margin-bottom: 20px;
+                        }
+                    }
                     &.active {
                         background-color: #fff;
                         h3 {

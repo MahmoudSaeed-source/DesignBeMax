@@ -5,6 +5,20 @@
     flex-direction: column;
     margin-top: 30px;
     padding: 40px 60px;
+    &{
+        @include break_point(xsmobil){
+            padding: 0;
+            
+        }
+        @include break_point(mobil){
+            padding: 0;
+
+        }
+        @include break_point(medium){
+            padding: 0;
+
+        }
+    }
     h2 {
         width: 30px;
         font-size: 37px;
@@ -74,6 +88,22 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        & {
+                @include break_point(xsmobil) {
+                    padding: 0;
+        
+                }
+        
+                @include break_point(mobil) {
+                    padding: 0;
+        
+                }
+        
+                @include break_point(medium) {
+                    padding: 0;
+        
+                }
+            }
         .item {
             max-width: 700px;
             height: 350px;
@@ -90,14 +120,19 @@
                 @include break_point(xsmobil) {
                     width: 100%;
                     max-width: 100%;
+                    height: auto;padding: 0;
                 }
                 @include break_point(mobil) {
                     width: 100%;
                     max-width: 100%;
+                    height: auto;
+                    padding: 0;
                 }
-                @include break_point(media) {
+                @include break_point(medium) {
                     width: 100%;
                     max-width: 100%;
+                    height: auto;
+                    padding: 0;
                 }
             }
             &.active {
@@ -149,8 +184,39 @@
             }
             .item-img {
                 height: 300;
+                &{
+                    @include break_point(xsmobil){
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                    @include break_point(mobil){
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                    @include break_point(medium){
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
                 img {
                     height: 100%;
+                    &{
+                        @include break_point(xsmobil){
+                            height: 100%;
+                                width: 100%;
+                            
+                        }
+                        @include break_point(mobil){
+                            height: 100%;
+                                width: 100%;
+                            
+                        }
+                        @include break_point(medium){
+                            height: 100%;
+                                width: 100%;
+                            
+                        }
+                    }
                 }
             }
         }

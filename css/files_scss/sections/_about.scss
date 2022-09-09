@@ -96,7 +96,9 @@
             & {
                 @include break_point(xsmobil) {
                     text-align: center;
-                    margin-top: 20px;
+                        margin-top: 20px;
+                        font-size: 16px;
+                        margin-bottom: 20px;
                 }
                 @include break_point(mobil) {
                     text-align: center;
