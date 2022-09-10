@@ -1752,7 +1752,7 @@ svg {
   }
 }
 .price .content-price .product-price {
-  width: 400px;
+  width: 320px;
   height: 500px;
   display: flex;
   align-items: center;
@@ -1766,6 +1766,39 @@ svg {
   margin-right: 30px;
   box-shadow: 0px -1px 8px 3px #ddd, 0px -1px 1px 3px #ddd;
   border-radius: 4px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.price .content-price .product-price::after {
+  content: "";
+  position: absolute;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: #f00;
+  height: 0%;
+  width: 1px;
+  bottom: 0;
+  right: 0;
+  transition: all 0.8s linear;
+}
+.price .content-price .product-price::before {
+  content: "";
+  content: "";
+  position: absolute;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #f00;
+  height: 0%;
+  width: 1px;
+  top: 0;
+  left: 0;
+  transition: all 0.8s linear;
+}
+.price .content-price .product-price:hover::after {
+  height: 100%;
+}
+.price .content-price .product-price:hover::before {
+  height: 100%;
 }
 @media (max-width: 480px) {
   .price .content-price .product-price {
