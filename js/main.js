@@ -2,7 +2,7 @@ let Nav_Bar_header = document.querySelector(".full-width");
 let log_img = document.querySelector(".img-src");
 let video_Btn = document.querySelector(".video_btn");
 let counter_slide = document.querySelector(".counter_slide");
-let imagesSlider = document.querySelectorAll(".item-img img");
+
 let toggle_btn = document.querySelector(".toggle_btn");
 let links = document.querySelector(".links");
 let links_A = document.querySelectorAll(".links li a");
@@ -26,17 +26,7 @@ function setActiveClass_onScroll() {
         }
     })
 }
-
-
-
-// end function set class active onscroll on the links
-
-
-
-
-
-
-
+// end function set class active onscroll on the link
 // start menu likes open
 toggle_btn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -50,9 +40,6 @@ toggle_btn.addEventListener("click", (e) => {
 
     })
     // end menu likes open
-
-
-
 // start nav bar scroll
 window.onscroll = function() {
     let Dark_Logo = "images/log/logo-dark.png";
@@ -73,7 +60,6 @@ window.onscroll = function() {
 // end nav bar scroll
 // start scroll skills section
 let skills = document.querySelector(".skills");
-
 
 function skillAnimation() {
     let offsetY = skills.offsetTop; //the destines between screen and element form top
@@ -144,8 +130,10 @@ Li_item_Link.forEach((ele) => {
 
 // start images gallery
 let Images_Icons = document.querySelectorAll(".icon-img");
-let number_Items = 1;
+let imgsrc = ["images/gallery/1.jpg","images/gallery/2.jpg","images/gallery/3.jpg","images/gallery/4.jpg","images/gallery/5.jpg","images/gallery/6.jpg","images/gallery/7.jpg"]
+
 Images_Icons.forEach((Element) => {
+    let number_Items = 1;
     Element.addEventListener("click", (e) => {
         let Img_slider_container = document.createElement("div");
         Img_slider_container.setAttribute("class", " Img_slider_container");
@@ -162,32 +150,16 @@ Images_Icons.forEach((Element) => {
         let content_img = document.createElement("img");
         content_img.setAttribute("class", "img-content");
         viewer.appendChild(content_img);
-
         content_img.src = e.target.src;
         let Btn_right = document.createElement("span");
         Btn_right.setAttribute("class", "right");
         viewer.appendChild(Btn_right);
 
-        Btn_left.addEventListener("click", () => {
-            if (number_Items == 1) {
-                Btn_left.classList.add("disable")
-            } else {
-                back.classList.remove("disable")
-                number_Items--;
-                content_img.src = imagesSlider[number_Items].src;
-            }
-        })
-        Btn_right.addEventListener("click", () => {
-            if (number_Items == imagesSlider.length) {
-                next.classList.remove("disable")
-                number_Items++;
-                content_img.src = imagesSlider[number_Items].src;
+        
 
-            } else {
-                Btn_right.classList.add("disable")
-            }
-
-        })
+        
+       
+      
         CloseViewer();
 
     });
