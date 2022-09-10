@@ -184,6 +184,12 @@
             @include break_point(xsmobil) {
                 height: auto;
             }
+            @include break_point(mobil) {
+                height: auto;
+            }
+            @include break_point(medium) {
+                height: auto;
+            }
         }
     .content-price {
         width: 100%;
@@ -231,16 +237,19 @@
                         max-width: 95%;
                         margin-bottom: 40px;
                         margin-right: 5px;
+                        height: auto;
                     }
                     @include break_point(mobil) {
                         max-width: 95%;
                         margin-bottom: 40px;
                         margin-right: 5px;
+                        height: auto;
                     }
                     @include break_point(medium) {
                         max-width: 95%;
                         margin-bottom: 40px;
                         margin-right: 5px;
+                        height: auto;
                     }
                 }
             .type {
@@ -438,15 +447,18 @@
                     margin: 0 auto;
                     &{
                         @include break_point(xsmobil){
-                            width: 100%;
+                            width: 80%;
+                            max-width: 80%;
                             margin-bottom: 50px;
                         }
                         @include break_point(mobil){
-                            width: 100%;
+                            width: 80%;
+                            max-width: 80%;
                             margin-bottom: 50px;
                         }
                         @include break_point(medium){
-                            width: 100%;
+                            width: 80%;
+                            max-width: 80%;
                             margin-bottom: 50px;
                         }
                     }
@@ -464,6 +476,14 @@
             left: 0;
             &{
                 @include break_point(xsmobil){
+                    bottom: 0;
+                    margin-bottom: 30px;
+                }
+                @include break_point(mobil){
+                    bottom: 0;
+                    margin-bottom: 30px;
+                }
+                @include break_point(medium){
                     bottom: 0;
                     margin-bottom: 30px;
                 }

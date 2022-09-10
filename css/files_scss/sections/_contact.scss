@@ -1,158 +1,354 @@
 .contact {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .contact_container {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    .contact_container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .contact_form {
-            margin-left: -30px;
-            h2 {
-                width: 100%;
-                font-size: 37px;
-                font-weight: 200;
-                text-transform: capitalize;
-                letter-spacing: .2rem;
-                font-family: $second_font;
-                border-left: 1px solid #eee;
-                padding-left: 10px;
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 60px;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: -1px;
-                    background-color: #f00;
-                    width: 1px;
-                    height: 50%;
-                }
-                span {
-                    font-weight: 700;
-                }
-            }
-            form {
-                padding: 20px;
-                .Data {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                }
-                .name,
-                .email {
-                    width: 47%;
-                    padding: 20px 20px;
-                    border: 0;
-                    background: #f7f7f7;
-                    border-radius: 5px;
-                    height: 20px;
-                }
-                .subject {
-                    width: 100%;
-                    border: 0;
-                    margin-top: 20px;
-                    background: #f7f7f7;
-                    border-radius: 5px;
-                    height: 20px;
-                    padding: 20px;
-                }
-                #form_message {
-                    height: 160px;
-                    width: 100%;
-                    margin-top: 20px;
-                    border: 0;
-                    background: #f7f7f7;
-                    border-radius: 5px;
-                    padding: 10px;
-                }
-                .Btn_send {
-                    width: 100%;
-                    height: 40px;
-                    margin-top: 40px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    span {
-                        width: 200px;
-                        height: 40px;
-                        background-color: $main_red;
-                        color: #fff;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-weight: 700;
-                        font-size: 13px;
-                        font-family: $main_font;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
+    @include break_point(xsmobil) {
+      flex-direction: column;
+      height: auto;
+      flex-wrap: wrap;
+      overflow: hidden;
     }
-    .ways_contact {
-        width: 100%;
-        height: 300px;
-        background-image: url("../../../images/team/5.jpg");
-        background-attachment: fixed;
-        .over_ways {
-            width: 100%;
-            height: 100%;
-            background-color: #000000cc;
+    @include break_point(mobil) {
+      flex-direction: column;
+      height: auto;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    @include break_point(medium) {
+      flex-direction: column;
+      height: auto;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .map {
+      & {
+        @include break_point(xsmobil) {
+          width: 90%;
+          max-width: 98%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+        @include break_point(mobil) {
+          width: 90%;
+          max-width: 98%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+        @include break_point(medium) {
+          width: 100%;
+          max-width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .contact_form {
+      margin-left: -30px;
+&{
+    @include break_point(xsmobil){
+        width: 80%;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    @include break_point(mobil){
+        width: 80%;
+            margin-left: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            .contact_tools {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                .tool {
-                    width: 25%;
-                    height: 130px;
-                    background-color: rgb(51 51 51 / 15%);
-                    ;
-                    box-shadow: 2px 2px 2px #000, -2px -2px 2px #000;
-                    color: #fff;
-                    border-radius: 6px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    .icon_way {
-                        display: flex;
-                        align-items: center;
-                        justify-content: start;
-                        width: 10%;
-                        height: 100%;
-                        margin-left: -59px;
-                        margin-right: 37px;
-                        svg {
-                            font-size: 40px;
-                        }
-                    }
-                    .detalis_way {
-                        overflow: hidden;
-                        h2 {
-                            width: 100%;
-                            height: 100%;
-                            font-size: 18px;
-                            font-family: $main-font;
-                            margin-bottom: 5px;
-                        }
-                        p {
-                            font-size: 18px;
-                            font-weight: 300;
-                        }
-                    }
-                }
+            flex-direction: column;
+            margin-bottom: 30px;
+    }
+    @include break_point(medium){
+        width: 80%;
+            margin-left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 30px;
+    }
+}
+      h2 {
+        width: 100%;
+        font-size: 37px;
+        font-weight: 200;
+        text-transform: capitalize;
+        letter-spacing: 0.2rem;
+        font-family: $second_font;
+        border-left: 1px solid #eee;
+        padding-left: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 60px;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: -1px;
+          background-color: #f00;
+          width: 1px;
+          height: 50%;
+        }
+        span {
+          font-weight: 700;
+        }
+      }
+      form {
+        padding: 20px;
+        & {
+          @include break_point(xsmobil) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0;
+          }
+          @include break_point(mobil) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0;
+          }
+          @include break_point(medium) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0;
+          }
+        }
+        .Data {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          & {
+            @include break_point(xsmobil) {
+              flex-direction: column;
+              width: 100%;
+            }
+            @include break_point(mobil) {
+              flex-direction: column;
+              width: 100%;
+            }
+            @include break_point(medium) {
+              flex-direction: column;
+              width: 100%;
+            }
+          }
+        }
+        .name,
+        .email {
+          width: 47%;
+          padding: 20px 20px;
+          border: 0;
+          background: #f7f7f7;
+          border-radius: 5px;
+          height: 20px;
+          & {
+            @include break_point(xsmobil) {
+              width: 100%;
+              margin-bottom: 20px;
+            }
+            @include break_point(mobil) {
+              width: 100%;
+              margin-bottom: 20px;
+            }
+            @include break_point(medium) {
+              width: 100%;
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .subject {
+          width: 100%;
+          border: 0;
+          margin-top: 20px;
+          background: #f7f7f7;
+          border-radius: 5px;
+          height: 20px;
+          padding: 20px;
+        }
+        #form_message {
+          height: 160px;
+          width: 100%;
+          margin-top: 20px;
+          border: 0;
+          background: #f7f7f7;
+          border-radius: 5px;
+          padding: 10px;
+        }
+        .Btn_send {
+          width: 100%;
+          height: 40px;
+          margin-top: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          span {
+            width: 200px;
+            height: 40px;
+            background-color: $main_red;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+            font-family: $main_font;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .ways_contact {
+    width: 100%;
+    height: 300px;
+    background-image: url("../../../images/team/5.jpg");
+    background-attachment: fixed;
+    & {
+            @include break_point(xsmobil) {
+           
+                height: auto;
+            }
+    
+            @include break_point(mobil) {
+              
+                height: auto;
+            }
+    
+            @include break_point(medium) {
+        
+                height: auto;
             }
         }
+    .over_ways {
+      width: 100%;
+      height: 100%;
+      background-color: #000000cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    & {
+            @include break_point(xsmobil) {
+           
+                height: auto;
+            }
+    
+            @include break_point(mobil) {
+                
+                height: auto;
+            }
+    
+            @include break_point(medium) {
+                
+                height: auto;
+            }
+        }
+      .contact_tools {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        &{
+            @include break_point(xsmobil){
+                flex-direction: column;
+                height: auto;
+                margin-top: 50px;
+            }
+            @include break_point(mobil){
+                flex-direction: column;
+                height: auto;
+                margin-top: 50px;
+            }
+            @include break_point(medium){
+                flex-direction: column;
+                height: auto;
+                margin-top: 50px;
+            }
+        }
+        .tool {
+          width: 25%;
+          height: 130px;
+          background-color: rgb(51 51 51 / 15%);
+          box-shadow: 2px 2px 2px #000, -2px -2px 2px #000;
+          color: #fff;
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &{
+            @include break_point(xsmobil){
+                width:100%;
+                max-width: 90%;
+                margin-bottom: 30px;
+            }
+            @include break_point(mobil){
+                width: 70%;
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+            @include break_point(medium){
+                width: 50%;
+                max-width: 50%;
+                margin-bottom: 30px;
+            }
+          }
+          .icon_way {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            width: 10%;
+            height: 100%;
+            margin-left: -59px;
+            margin-right: 37px;
+            svg {
+              font-size: 40px;
+              color:#ddd;
+            }
+          }
+          .detalis_way {
+            overflow: hidden;
+            h2 {
+              width: 100%;
+              height: 100%;
+              font-size: 18px;
+              font-family: $main-font;
+              margin-bottom: 5px;
+            }
+            p {
+              font-size: 18px;
+              font-weight: 300;
+            }
+          }
+        }
+      }
     }
+  }
 }

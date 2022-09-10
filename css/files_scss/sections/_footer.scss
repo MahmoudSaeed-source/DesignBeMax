@@ -32,11 +32,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    &{
+        @include break_point(xsmobil){
+            width: 80%;
+        }
+        @include break_point(mobil){
+            width: 80%;
+        }
+        @include break_point(medium){
+            width: 80%;
+        }
+    }
     a {
         color: #777;
         svg {
             margin-right: 30px;
             font-size: 20px;
+            color: rgb(88, 85, 85);
+            &{
+                @include break_point(xsmobil){
+                    margin-right: 10px;
+                }
+                @include break_point(mobil){
+                    margin-right: 10px;
+                }
+                @include break_point(medium){
+                    margin-right: 10px;
+                }
+            }
+            &:hover{
+                color:#fff;
+            }
         }
     }
 }
