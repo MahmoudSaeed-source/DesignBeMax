@@ -147,6 +147,7 @@ Images_Icons.forEach((Element) => {
         let Btn_left = document.createElement("span");
         Btn_left.setAttribute("class", "left");
         viewer.appendChild(Btn_left);
+        Btn_left.innerHTML = `<i class="fa-solid fa-caret-left"></i>`;
         let content_img = document.createElement("img");
         content_img.setAttribute("class", "img-content");
         viewer.appendChild(content_img);
@@ -154,6 +155,28 @@ Images_Icons.forEach((Element) => {
         let Btn_right = document.createElement("span");
         Btn_right.setAttribute("class", "right");
         viewer.appendChild(Btn_right);
+        Btn_right.innerHTML = `<i class="fa-solid fa-caret-right"></i>`;
+
+        Btn_right.onclick = () => {
+          
+            if(number_Items === imgsrc.length-1) {
+                number_Items = 0;
+            } else {
+                number_Items++;
+                content_img.src = imgsrc[number_Items];
+            }
+          
+        }
+
+        Btn_left.onclick = ()=>{
+            if(number_Items === 0 ) {
+           number_Items = imgsrc.length
+            } else {
+                number_Items--;
+                content_img.src = imgsrc[number_Items];
+            }
+        }
+       
 
         
 
@@ -194,7 +217,7 @@ Counter_Number.forEach((number) => {
         } else {
             number.innerHTML = Counter_Start++;
         }
-    }, 0.1);
+    }, 1);
 });
 // end counter slider
 

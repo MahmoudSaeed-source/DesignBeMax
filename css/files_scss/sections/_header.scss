@@ -40,24 +40,30 @@
                 width: auto;
             }
             ul {
-                animation: moved 5s steps(14) infinite;
+                animation: moved 4s steps(9) infinite;
                 margin-left: 15px;
                 width: 0;
-                // overflow: hidden;
+                overflow: hidden;
                 flex-wrap: nowrap;
-                height: 60px;
-                border: 2px solid green;
-                transition: all .3s ease;
+                height: 90px;
                 line-height: 90px;
-                // overflow: hidden;
+                word-wrap: none;
+                    
+                    white-space: none;
+             
                 li {
+                  
                     font-size: 80px;
                     font-weight: 700;
                     text-transform: uppercase;
                     font-family: $main_font;
                     position: relative;
                     color: $main_red;
-                    animation: moveup 15s steps(3) infinite;
+                    word-wrap: none;
+                    overflow: hidden;
+                    white-space: none;
+                    top:0;
+                    animation: moveup 12s steps(3) infinite;
                     &::after {
                         content: "";
                         position: absolute;
@@ -123,9 +129,12 @@
             left: 0;
         }
     }
+
     @keyframes moveup {
-        100% {
-            top: -270px;
+     
+        100%{
+            top:-270px;
         }
     }
+ 
 }

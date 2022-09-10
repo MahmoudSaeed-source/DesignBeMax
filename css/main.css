@@ -52,7 +52,7 @@ body .Img_slider_container .content_slider {
   align-items: center;
 }
 body .Img_slider_container .content_slider .viewer {
-  width: 80% !important;
+  width: 100% !important;
   height: 380px !important;
   position: fixed;
   top: 100px;
@@ -70,15 +70,19 @@ body .Img_slider_container .content_slider .viewer img {
 }
 body .Img_slider_container .content_slider .viewer .left,
 body .Img_slider_container .content_slider .viewer .right {
-  width: 50px;
-  height: 50px;
-  background-color: #786d6d;
+  width: 25px;
+  height: 25px;
+  background-color: #0d1423;
   color: #fff;
   display: flex;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+body .Img_slider_container .content_slider .viewer .left.Not-Active,
+body .Img_slider_container .content_slider .viewer .right.Not-Active {
+  cursor: no-drop;
 }
 
 p {
@@ -134,15 +138,16 @@ p {
   width: auto;
 }
 .header .text_content .anmaition ul {
-  -webkit-animation: moved 5s steps(14) infinite;
-          animation: moved 5s steps(14) infinite;
+  -webkit-animation: moved 4s steps(9) infinite;
+          animation: moved 4s steps(9) infinite;
   margin-left: 15px;
   width: 0;
+  overflow: hidden;
   flex-wrap: nowrap;
-  height: 60px;
-  border: 2px solid green;
-  transition: all 0.3s ease;
+  height: 90px;
   line-height: 90px;
+  word-wrap: none;
+  white-space: none;
 }
 .header .text_content .anmaition ul li {
   font-size: 80px;
@@ -151,8 +156,12 @@ p {
   font-family: "Poppins", sans-serif;
   position: relative;
   color: #F24259;
-  -webkit-animation: moveup 15s steps(3) infinite;
-          animation: moveup 15s steps(3) infinite;
+  word-wrap: none;
+  overflow: hidden;
+  white-space: none;
+  top: 0;
+  -webkit-animation: moveup 12s steps(3) infinite;
+          animation: moveup 12s steps(3) infinite;
 }
 .header .text_content .anmaition ul li::after {
   content: "";
